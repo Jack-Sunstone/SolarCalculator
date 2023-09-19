@@ -861,6 +861,12 @@ class MainWindow(QMainWindow):
     def getZone(self):
         global unitZone
         unitZone = str(self.zoneSelect.currentText())
+
+    def getARCBaseLine(self, Baseline):
+        global ARCbaseline
+        ARCbaseline = Baseline
+
+
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
