@@ -969,7 +969,10 @@ class MainWindow(QMainWindow):
             januaryCost = '%.2f' % (float(januaryMethanol) * 10.68)
             self.januaryMethanol.setText(f"{januaryMethanol}L")
             self.januaryCost.setText(f"£{januaryCost}")
-
+        else:
+            januaryCost = 0
+            self.januaryMethanol.setText("0L")
+            self.januaryCost.setText("£0")
 
 app = QApplication([])
 app.setStyle('Fusion')
