@@ -1085,6 +1085,7 @@ class MainWindow(QMainWindow):
 
         methanolTotal = '%.2f' % (float(januaryCost) + float(februaryCost) + float(marchCost) + float(aprilCost) + float(mayCost) + float(juneCost) + float(julyCost) + float(augustCost) + float(septemberCost) + float(octoberCost) + float(novemberCost) + float(decemberCost))
 
+        self.methanolTotal.setText(f"£{methanolTotal}")
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
