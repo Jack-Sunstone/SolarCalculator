@@ -950,6 +950,21 @@ class MainWindow(QMainWindow):
         while w < 12:
             surplusOrdeficit.append(globals()[f"{unitZone}{solarArray}"][w] - totalLoadMonth[w])
             w = w + 1
+
+        self.januarySystem.setText(f"{'%.2f' % surplusOrdeficit[0]}W")
+        self.februarySystem.setText(f"{'%.2f' % surplusOrdeficit[1]}W")
+        self.marchSystem.setText(f"{'%.2f' % surplusOrdeficit[2]}W")
+        self.aprilSystem.setText(f"{'%.2f' % surplusOrdeficit[3]}W")
+        self.maySystem.setText(f"{'%.2f' % surplusOrdeficit[4]}W")
+        self.juneSystem.setText(f"{'%.2f' % surplusOrdeficit[5]}W")
+        self.julySystem.setText(f"{'%.2f' % surplusOrdeficit[6]}W")
+        self.augustSystem.setText(f"{'%.2f' % surplusOrdeficit[7]}W")
+        self.septemberSystem.setText(f"{'%.2f' % surplusOrdeficit[8]}W")
+        self.octoberSystem.setText(f"{'%.2f' % surplusOrdeficit[9]}W")
+        self.novemberSystem.setText(f"{'%.2f' % surplusOrdeficit[10]}W")
+        self.decemberSystem.setText(f"{'%.2f' % surplusOrdeficit[11]}W")
+
+
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
