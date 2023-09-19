@@ -858,7 +858,9 @@ class MainWindow(QMainWindow):
             self.typicalValue.setText(f"{str(camerasTypical)}W")
             self.higherValue.setText(f"{str(camerasHigher)}W")
 
-            
+    def getZone(self):
+        global unitZone
+        unitZone = str(self.zoneSelect.currentText())
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
