@@ -57,7 +57,52 @@ class MainWindow(QMainWindow):
 
         layout = QGridLayout()
 
+        # No Cameras and Models
+        ###########################################################
+        self.NoCamera = QLabel("No. Of Cameras:")
+        layout.addWidget(self.NoCamera, 0, 0)
 
+        self.NoCameraSelect = QComboBox()
+        self.NoCameraSelect.addItems(["", "1", "2", "3", "4", "5", "6"])
+        layout.addWidget(self.NoCameraSelect, 0, 1)
+
+        self.camera1 = QLabel("Camera 1:")
+        layout.addWidget(self.camera1, 1, 0)
+
+        self.camera1Select = QComboBox()
+        layout.addWidget(self.camera1Select, 1, 1)
+
+        self.camera2 = QLabel("Camera 2:")
+        layout.addWidget(self.camera2, 2, 0)
+
+        self.camera2Select = QComboBox()
+        layout.addWidget(self.camera2Select, 2, 1)
+
+        self.camera3 = QLabel("Camera 3:")
+        layout.addWidget(self.camera3, 3, 0)
+
+        self.camera3Select = QComboBox()
+        layout.addWidget(self.camera3Select, 3, 1)
+
+        self.camera4 = QLabel("Camera 4:")
+        layout.addWidget(self.camera4, 4, 0)
+
+        self.camera4Select = QComboBox()
+        layout.addWidget(self.camera4Select, 4, 1)
+
+        self.camera5 = QLabel("Camera 5:")
+        layout.addWidget(self.camera5, 5, 0)
+
+        self.camera5Select = QComboBox()
+        layout.addWidget(self.camera5Select, 5, 1)
+
+        self.camera6 = QLabel("Camera 6:")
+        layout.addWidget(self.camera6, 6, 0)
+
+        self.camera6Select = QComboBox()
+        layout.addWidget(self.camera6Select, 6, 1)
+
+        ###########################################################
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
