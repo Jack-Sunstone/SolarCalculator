@@ -870,6 +870,13 @@ class MainWindow(QMainWindow):
         global solarArray
         solarArray = str(self.solarArraySelect.currentText())
 
+    def doCalculations(self):
+        global camerasTypical
+        global camerasHigher
+        global solarArray
+        global ARCbaseline
+        global unitZone
+
 
 app = QApplication([])
 app.setStyle('Fusion')
