@@ -940,6 +940,10 @@ class MainWindow(QMainWindow):
         actualCameraLoadNightMonth.append(camerasHigher * 16.6 * 31)
 
         j = 0
+
+        while j < 12:
+            totalLoadMonth.append(baselineLoadPerMonth[j] + actualCameraLoadDayMonth[j] + actualCameraLoadNightMonth[j])
+            j = j + 1
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
