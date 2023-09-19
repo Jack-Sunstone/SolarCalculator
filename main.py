@@ -984,15 +984,14 @@ class MainWindow(QMainWindow):
             self.februaryMethanol.setText("0L")
             self.februaryCost.setText("£0")
 
-        if surplusOrdeficit[1] < 0:
-            februaryMethanol = '%.2f' % ((surplusOrdeficit[1] / 1000) * -1)
-            februaryCost = '%.2f' % (float(februaryMethanol) * 10.68)
-            self.februaryMethanol.setText(f"{februaryMethanol}L")
-            self.februaryCost.setText(f"£{februaryCost}")
+        if surplusOrdeficit[2] < 0:
+            marchMethanol = '%.2f' % ((surplusOrdeficit[2] / 1000) * -1)
+            marchCost = '%.2f' % (float(marchMethanol) * 10.68)
+            self.marchMethanol.setText(f"{marchMethanol}L")
         else:
-            februaryCost = 0
-            self.februaryMethanol.setText("0L")
-            self.februaryCost.setText("£0")
+            marchCost = 0
+            self.marchMethanol.setText("0L")
+            self.marchCost.setText("£0")
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
