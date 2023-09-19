@@ -172,6 +172,49 @@ class MainWindow(QMainWindow):
         layout.addWidget(self.higherValue, 8, 3)
         ####################################################
 
+        # Months Headings
+        #######################################################
+        self.heading1 = QLabel("Month - ")
+        layout.addWidget(self.heading1, 10, 0)
+
+        self.january = QLabel("January")
+        layout.addWidget(self.january, 11, 0)
+
+        self.february = QLabel("February")
+        layout.addWidget(self.february, 12, 0)
+
+        self.march = QLabel("March")
+        layout.addWidget(self.march, 13, 0)
+
+        self.april = QLabel("April")
+        layout.addWidget(self.april, 14, 0)
+
+        self.may = QLabel("May")
+        layout.addWidget(self.may, 15, 0)
+
+        self.june = QLabel("June")
+        layout.addWidget(self.june, 16, 0)
+
+        self.july = QLabel("July")
+        layout.addWidget(self.july, 17, 0)
+
+        self.august = QLabel("August")
+        layout.addWidget(self.august, 18, 0)
+
+        self.september = QLabel("September")
+        layout.addWidget(self.september, 19, 0)
+
+        self.october = QLabel("October")
+        layout.addWidget(self.october, 20, 0)
+
+        self.november = QLabel("November")
+        layout.addWidget(self.november, 21, 0)
+
+        self.december = QLabel("December")
+        layout.addWidget(self.december, 22, 0)
+        #######################################################
+
+
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
