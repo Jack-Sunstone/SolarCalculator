@@ -703,6 +703,12 @@ class MainWindow(QMainWindow):
                         item = line.split()
                         typicalWatt = float(item[1])
                         higherWatt = float(item[2])
+            camerasTypical += typicalWatt
+            camerasHigher += higherWatt
+            camera1LastTypical = typicalWatt
+            camera1LastHigher = higherWatt
+            self.typicalValue.setText(f"{str(camerasTypical)}W")
+            self.higherValue.setText(f"{str(camerasHigher)}W")
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
