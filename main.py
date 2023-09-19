@@ -939,7 +939,7 @@ class MainWindow(QMainWindow):
         actualCameraLoadNightMonth.append(camerasHigher * 15.4 * 30)
         actualCameraLoadNightMonth.append(camerasHigher * 16.6 * 31)
 
-
+        j = 0
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
