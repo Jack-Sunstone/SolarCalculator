@@ -103,6 +103,39 @@ class MainWindow(QMainWindow):
         layout.addWidget(self.camera6Select, 6, 1)
 
         ###########################################################
+
+        # Image And Key
+        ######################################################
+        self.zoneImage = QLabel()
+        pixmap = QPixmap(ZonesImage)
+        self.zoneImage.setPixmap(pixmap)
+        layout.addWidget(self.zoneImage, 0, 2, 4, 2)
+
+        self.zone1 = QLabel("Zone 1")
+        self.zone1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.zone1.setStyleSheet("background-color:#627B95;"
+                                 "color:white")
+        layout.addWidget(self.zone1, 0, 3)
+
+        self.zone2 = QLabel("Zone 2")
+        self.zone2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.zone2.setStyleSheet("background-color:#A8DD52;"
+                                 "color:white")
+        layout.addWidget(self.zone2, 1, 3)
+
+        self.zone3 = QLabel("Zone 3")
+        self.zone3.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.zone3.setStyleSheet("background-color:#24ACD1;"
+                                 "color:white")
+        layout.addWidget(self.zone3, 2, 3)
+
+        self.zone4 = QLabel("Zone 4")
+        self.zone4.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.zone4.setStyleSheet("background-color:#A25356;"
+                                 "color:white")
+        layout.addWidget(self.zone4, 3, 3)
+
+        ######################################################
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
