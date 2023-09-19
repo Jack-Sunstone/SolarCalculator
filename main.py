@@ -1002,6 +1002,16 @@ class MainWindow(QMainWindow):
             aprilCost = 0
             self.aprilMethanol.setText("0L")
             self.aprilCost.setText("£0")
+
+        if surplusOrdeficit[4] < 0:
+            mayMethanol = '%.2f' % ((surplusOrdeficit[4] / 1000) * -1)
+            mayCost = '%.2f' % (float(mayMethanol)*10.68)
+            self.mayMethanol.setText(f"{mayMethanol}L")
+            self.mayCost.setText(f"£{mayCost}")
+        else:
+            mayCost = 0
+            self.mayMethanol.setText("0L")
+            self.mayCost.setText("£0")
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
