@@ -392,61 +392,99 @@ class MainWindow(QMainWindow):
         widget.setLayout(layout)
         self.setCentralWidget(widget)
 
-        def getNumCameras(self):
-            global camerasTypical
-            global camerasHigher
-            global camera1LastTypical
-            global camera1LastHigher
-            global camera2LastTypical
-            global camera2LastHigher
-            global camera3LastTypical
-            global camera3LastHigher
-            global camera4LastTypical
-            global camera4LastHigher
-            global camera5LastTypical
-            global camera5LastHigher
-            global camera6LastTypical
-            global camera6LastHigher
-            NumCameras = str(self.NoCameraSelect.currentText())
-            if len(NumCameras) == 0:
-                camera1LastTypical = 0
-                camera1LastHigher = 0
-                camera2LastTypical = 0
-                camera2LastHigher = 0
-                camera3LastTypical = 0
-                camera3LastHigher = 0
-                camera4LastTypical = 0
-                camera4LastHigher = 0
-                camera5LastTypical = 0
-                camera5LastHigher = 0
-                camera6LastTypical = 0
-                camera6LastHigher = 0
+    def getNumCameras(self):
+        global camerasTypical
+        global camerasHigher
+        global camera1LastTypical
+        global camera1LastHigher
+        global camera2LastTypical
+        global camera2LastHigher
+        global camera3LastTypical
+        global camera3LastHigher
+        global camera4LastTypical
+        global camera4LastHigher
+        global camera5LastTypical
+        global camera5LastHigher
+        global camera6LastTypical
+        global camera6LastHigher
+        NumCameras = str(self.NoCameraSelect.currentText())
+        if len(NumCameras) == 0:
+            camera1LastTypical = 0
+            camera1LastHigher = 0
+            camera2LastTypical = 0
+            camera2LastHigher = 0
+            camera3LastTypical = 0
+            camera3LastHigher = 0
+            camera4LastTypical = 0
+            camera4LastHigher = 0
+            camera5LastTypical = 0
+            camera5LastHigher = 0
+            camera6LastTypical = 0
+            camera6LastHigher = 0
 
-                camerasTypical = 0
-                camerasHigher = 0
-                self.typicalValue.setText(f"{str(camerasTypical)}W")
-                self.higherValue.setText(f"{str(camerasHigher)}W")
+            camerasTypical = 0
+            camerasHigher = 0
+            self.typicalValue.setText(f"{str(camerasTypical)}W")
+            self.higherValue.setText(f"{str(camerasHigher)}W")
 
-                self.camera1Select.setCurrentText("")
-                self.camera2Select.setCurrentText("")
-                self.camera3Select.setCurrentText("")
-                self.camera4Select.setCurrentText("")
-                self.camera5Select.setCurrentText("")
-                self.camera6Select.setCurrentText("")
+            self.camera1Select.setCurrentText("")
+            self.camera2Select.setCurrentText("")
+            self.camera3Select.setCurrentText("")
+            self.camera4Select.setCurrentText("")
+            self.camera5Select.setCurrentText("")
+            self.camera6Select.setCurrentText("")
 
-                self.camera1.hide()
-                self.camera1Select.hide()
-                self.camera2.hide()
-                self.camera2Select.hide()
-                self.camera3.hide()
-                self.camera3Select.hide()
-                self.camera4.hide()
-                self.camera4Select.hide()
-                self.camera5.hide()
-                self.camera5Select.hide()
-                self.camera6.hide()
-                self.camera6Select.hide()
+            self.camera1.hide()
+            self.camera1Select.hide()
+            self.camera2.hide()
+            self.camera2Select.hide()
+            self.camera3.hide()
+            self.camera3Select.hide()
+            self.camera4.hide()
+            self.camera4Select.hide()
+            self.camera5.hide()
+            self.camera5Select.hide()
+            self.camera6.hide()
+            self.camera6Select.hide()
+        elif NumCameras == "1":
 
+            camera1LastTypical = 0
+            camera1LastHigher = 0
+            camera2LastTypical = 0
+            camera2LastHigher = 0
+            camera3LastTypical = 0
+            camera3LastHigher = 0
+            camera4LastTypical = 0
+            camera4LastHigher = 0
+            camera5LastTypical = 0
+            camera5LastHigher = 0
+            camera6LastTypical = 0
+            camera6LastHigher = 0
+
+            camerasTypical = 0
+            camerasHigher = 0
+            self.typicalValue.setText(f"{str(camerasTypical)}W")
+            self.higherValue.setText(f"{str(camerasHigher)}W")
+
+            self.camera1Select.setCurrentText("")
+            self.camera2Select.setCurrentText("")
+            self.camera3Select.setCurrentText("")
+            self.camera4Select.setCurrentText("")
+            self.camera5Select.setCurrentText("")
+            self.camera6Select.setCurrentText("")
+
+            self.camera1.show()
+            self.camera1Select.show()
+            self.camera2.hide()
+            self.camera2Select.hide()
+            self.camera3.hide()
+            self.camera3Select.hide()
+            self.camera4.hide()
+            self.camera4Select.hide()
+            self.camera5.hide()
+            self.camera5Select.hide()
+            self.camera6.hide()
+            self.camera6Select.hide()
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
