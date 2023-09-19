@@ -896,6 +896,10 @@ class MainWindow(QMainWindow):
         self.novemberSystem.setText("")
         self.decemberSystem.setText("")
 
+        months31 = int(ARCbaseline) * 24 * 31
+        months30 = int(ARCbaseline) * 24 * 30
+        febuary28 = int(ARCbaseline) * 24 * 28
+
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
