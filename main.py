@@ -1043,7 +1043,15 @@ class MainWindow(QMainWindow):
             self.augustMethanol.setText("0L")
             self.augustCost.setText("£0")
 
-        
+        if surplusOrdeficit[8] < 0:
+            septemberMethanol = '%.2f' % ((surplusOrdeficit[8] / 1000) * -1)
+            septemberCost = '%.2f' % (float(septemberMethanol)*10.68)
+            self.septemberMethanol.setText(f"{septemberMethanol}L")
+            self.septemberCost.setText(f"£{septemberCost}")
+        else:
+            septemberCost = 0
+            self.septemberMethanol.setText("0L")
+            self.septemberCost.setText("£0")
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
