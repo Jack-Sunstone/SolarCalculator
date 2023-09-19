@@ -393,7 +393,20 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(widget)
 
         def getNumCameras(self):
-
+            global camerasTypical
+            global camerasHigher
+            global camera1LastTypical
+            global camera1LastHigher
+            global camera2LastTypical
+            global camera2LastHigher
+            global camera3LastTypical
+            global camera3LastHigher
+            global camera4LastTypical
+            global camera4LastHigher
+            global camera5LastTypical
+            global camera5LastHigher
+            global camera6LastTypical
+            global camera6LastHigher
 
 app = QApplication([])
 app.setStyle('Fusion')
