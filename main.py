@@ -1082,6 +1082,9 @@ class MainWindow(QMainWindow):
             decemberCost = 0
             self.decemberMethanol.setText("0L")
             self.decemberCost.setText("£0")
+
+        methanolTotal = '%.2f' % (float(januaryCost) + float(februaryCost) + float(marchCost) + float(aprilCost) + float(mayCost) + float(juneCost) + float(julyCost) + float(augustCost) + float(septemberCost) + float(octoberCost) + float(novemberCost) + float(decemberCost))
+
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
