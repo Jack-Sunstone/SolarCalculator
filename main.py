@@ -679,6 +679,14 @@ class MainWindow(QMainWindow):
             self.camera5Select.show()
             self.camera6.show()
             self.camera6Select.show()
+
+    def getCamera1(self):
+        global camerasTypical
+        global camerasHigher
+        global camera1LastTypical
+        global camera1LastHigher
+
+        
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
