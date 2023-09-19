@@ -866,6 +866,10 @@ class MainWindow(QMainWindow):
         global ARCbaseline
         ARCbaseline = Baseline
 
+    def getSolar(self):
+        global solarArry
+        solarArray = str(self.solarArraySelect.currentText())
+
 
 app = QApplication([])
 app.setStyle('Fusion')
