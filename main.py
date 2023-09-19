@@ -188,10 +188,13 @@ class MainWindow(QMainWindow):
         self.zoneSelect.addItems(["", "Zone1", "Zone2", "Zone3", "Zone4"])
         layout.addWidget(self.zoneSelect, 4, 3)
 
+        self.zoneSelect.activated.connect(self.getZone)
+
         self.baseLine = QLabel("ARC Base Line (W)")
         layout.addWidget(self.baseLine, 5, 2)
 
         self.baseLineText = QLineEdit()
+        self.baseLineText.textChanged.connect(self.getARCBaseline)
         layout.addWidget(self.baseLineText, 5, 3)
 
         self.solarArray = QLabel("Solar Array Size (W)")
@@ -200,6 +203,8 @@ class MainWindow(QMainWindow):
         self.solarArraySelect = QComboBox()
         self.solarArraySelect.addItems(["", "1", "700", "800", "1000", "1200", "2400"])
         layout.addWidget(self.solarArraySelect, 6, 3)
+
+        self.solarArraySelect.activated.connect(self.getSolar)
 
         # Camera Power Values
         ####################################################
