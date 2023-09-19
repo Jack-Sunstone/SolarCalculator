@@ -392,6 +392,8 @@ class MainWindow(QMainWindow):
         widget.setLayout(layout)
         self.setCentralWidget(widget)
 
+        def getNumCameras(self):
+
 
 app = QApplication([])
 app.setStyle('Fusion')
