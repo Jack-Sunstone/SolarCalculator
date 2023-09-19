@@ -693,7 +693,16 @@ class MainWindow(QMainWindow):
             self.higherValue.setText(f"{str(camerasHigher)}W")
             camera1LastTypical = 0
             camera1LastHigher = 0
-
+        if len(camera1) > 0:
+            camerasTypical -= camera1LastTypical
+            camerasHigher -= camera1LastHigher
+            with open("CameraPower.txt") as f:
+                datefile = f.readlines()
+                for line in datefile:
+                    if camera1 in line:
+                        item = line.split()
+                        typicalWatt = float(item[1])
+                        higherWatt = float(item[2])
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
