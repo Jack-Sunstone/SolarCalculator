@@ -136,6 +136,29 @@ class MainWindow(QMainWindow):
         layout.addWidget(self.zone4, 3, 3)
 
         ######################################################
+
+        self.zone = QLabel("Zone:")
+        layout.addWidget(self.zone, 4, 2)
+
+        self.zoneSelect = QComboBox()
+        self.zoneSelect.addItems(["", "Zone1", "Zone2", "Zone3", "Zone4"])
+        layout.addWidget(self.zoneSelect, 4, 3)
+
+        self.baseLine = QLabel("ARC Base Line (W)")
+        layout.addWidget(self.baseLine, 5, 2)
+
+        self.baseLineText = QLineEdit()
+        layout.addWidget(self.baseLineText, 5, 3)
+
+        self.solarArray = QLabel("Solar Array Size (W)")
+        layout.addWidget(self.solarArray, 6, 2)
+
+        self.solarArraySelect = QComboBox()
+        self.solarArraySelect.addItems(["", "1", "700", "800", "1000", "1200", "2400"])
+        layout.addWidget(self.solarArraySelect, 6, 3)
+
+
+
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
