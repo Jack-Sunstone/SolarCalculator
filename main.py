@@ -900,6 +900,19 @@ class MainWindow(QMainWindow):
         months30 = int(ARCbaseline) * 24 * 30
         febuary28 = int(ARCbaseline) * 24 * 28
 
+        baselineLoadPerMonth.append(months31)
+        baselineLoadPerMonth.append(febuary28)
+        baselineLoadPerMonth.append(months31)
+        baselineLoadPerMonth.append(months30)
+        baselineLoadPerMonth.append(months31)
+        baselineLoadPerMonth.append(months30)
+        baselineLoadPerMonth.append(months31)
+        baselineLoadPerMonth.append(months31)
+        baselineLoadPerMonth.append(months30)
+        baselineLoadPerMonth.append(months31)
+        baselineLoadPerMonth.append(months30)
+        baselineLoadPerMonth.append(months31)
+
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
