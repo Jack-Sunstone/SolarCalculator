@@ -157,7 +157,20 @@ class MainWindow(QMainWindow):
         self.solarArraySelect.addItems(["", "1", "700", "800", "1000", "1200", "2400"])
         layout.addWidget(self.solarArraySelect, 6, 3)
 
+        # Camera Power Values
+        ####################################################
+        self.typicalLabel = QLabel("Typical Camera Power:")
+        layout.addWidget(self.typicalLabel, 8, 0)
 
+        self.typicalValue = QLabel(f"{0}W")
+        layout.addWidget(self.typicalValue, 8, 1)
+
+        self.higherLabel = QLabel("Higher Camera Power:")
+        layout.addWidget(self.higherLabel, 8, 2)
+
+        self.higherValue = QLabel(f"{0}W")
+        layout.addWidget(self.higherValue, 8, 3)
+        ####################################################
 
 app = QApplication([])
 app.setStyle('Fusion')
