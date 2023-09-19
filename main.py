@@ -563,6 +563,45 @@ class MainWindow(QMainWindow):
             self.camera5Select.hide()
             self.camera6.hide()
             self.camera6Select.hide()
+        elif NumCameras == "4":
+
+            camera1LastTypical = 0
+            camera1LastHigher = 0
+            camera2LastTypical = 0
+            camera2LastHigher = 0
+            camera3LastTypical = 0
+            camera3LastHigher = 0
+            camera4LastTypical = 0
+            camera4LastHigher = 0
+            camera5LastTypical = 0
+            camera5LastHigher = 0
+            camera6LastTypical = 0
+            camera6LastHigher = 0
+
+            camerasTypical = 0
+            camerasHigher = 0
+            self.typicalValue.setText(f"{str(camerasTypical)}W")
+            self.higherValue.setText(f"{str(camerasHigher)}W")
+
+            self.camera1Select.setCurrentText("")
+            self.camera2Select.setCurrentText("")
+            self.camera3Select.setCurrentText("")
+            self.camera4Select.setCurrentText("")
+            self.camera5Select.setCurrentText("")
+            self.camera6Select.setCurrentText("")
+
+            self.camera1.show()
+            self.camera1Select.show()
+            self.camera2.show()
+            self.camera2Select.show()
+            self.camera3.show()
+            self.camera3Select.show()
+            self.camera4.show()
+            self.camera4Select.show()
+            self.camera5.hide()
+            self.camera5Select.hide()
+            self.camera6.hide()
+            self.camera6Select.hide()
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
