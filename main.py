@@ -964,6 +964,12 @@ class MainWindow(QMainWindow):
         self.novemberSystem.setText(f"{'%.2f' % surplusOrdeficit[10]}W")
         self.decemberSystem.setText(f"{'%.2f' % surplusOrdeficit[11]}W")
 
+        if surplusOrdeficit[0] < 0:
+            januaryMethanol = '%.2f' % ((surplusOrdeficit[0] / 1000) * -1)
+            januaryCost = '%.2f' % (float(januaryMethanol) * 10.68)
+            self.januaryMethanol.setText(f"{januaryMethanol}L")
+            self.januaryCost.setText(f"£{januaryCost}")
+
 
 app = QApplication([])
 app.setStyle('Fusion')
