@@ -214,6 +214,123 @@ class MainWindow(QMainWindow):
         layout.addWidget(self.december, 22, 0)
         #######################################################
 
+        self.heading1 = QLabel("System Surplus or Deficit - ")
+        layout.addWidget(self.heading1, 10, 1)
+
+        self.januarySystem = QLabel("")
+        layout.addWidget(self.januarySystem, 11, 1)
+
+        self.februarySystem = QLabel("")
+        layout.addWidget(self.februarySystem, 12, 1)
+
+        self.marchSystem = QLabel("")
+        layout.addWidget(self.marchSystem, 13, 1)
+
+        self.aprilSystem = QLabel("")
+        layout.addWidget(self.aprilSystem, 14, 1)
+
+        self.maySystem = QLabel("")
+        layout.addWidget(self.maySystem, 15, 1)
+
+        self.juneSystem = QLabel("")
+        layout.addWidget(self.juneSystem, 16, 1)
+
+        self.julySystem = QLabel("")
+        layout.addWidget(self.julySystem, 17, 1)
+
+        self.augustSystem = QLabel("")
+        layout.addWidget(self.augustSystem, 18, 1)
+
+        self.septemberSystem = QLabel("")
+        layout.addWidget(self.septemberSystem, 19, 1)
+
+        self.octoberSystem = QLabel("")
+        layout.addWidget(self.octoberSystem, 20, 1)
+
+        self.novemberSystem = QLabel("")
+        layout.addWidget(self.novemberSystem, 21, 1)
+
+        self.decemberSystem = QLabel("")
+        layout.addWidget(self.decemberSystem, 22, 1)
+
+        self.heading1 = QLabel("Methanol Requirements - ")
+        layout.addWidget(self.heading1, 10, 2)
+
+        self.januaryMethanol = QLabel("")
+        layout.addWidget(self.januaryMethanol, 11, 2)
+
+        self.februaryMethanol = QLabel("")
+        layout.addWidget(self.februaryMethanol, 12, 2)
+
+        self.marchMethanol = QLabel("")
+        layout.addWidget(self.marchMethanol, 13, 2)
+
+        self.aprilMethanol = QLabel("")
+        layout.addWidget(self.aprilMethanol, 14, 2)
+
+        self.mayMethanol = QLabel("")
+        layout.addWidget(self.mayMethanol, 15, 2)
+
+        self.juneMethanol = QLabel("")
+        layout.addWidget(self.juneMethanol, 16, 2)
+
+        self.julyMethanol = QLabel("")
+        layout.addWidget(self.julyMethanol, 17, 2)
+
+        self.augustMethanol = QLabel("")
+        layout.addWidget(self.augustMethanol, 18, 2)
+
+        self.septemberMethanol = QLabel("")
+        layout.addWidget(self.septemberMethanol, 19, 2)
+
+        self.octoberMethanol = QLabel("")
+        layout.addWidget(self.octoberMethanol, 20, 2)
+
+        self.novemberMethanol = QLabel("")
+        layout.addWidget(self.novemberMethanol, 21, 2)
+
+        self.decemberMethanol = QLabel("")
+        layout.addWidget(self.decemberMethanol, 22, 2)
+
+        self.heading1 = QLabel("Methanol Cost - ")
+        layout.addWidget(self.heading1, 10, 3)
+
+        self.januaryCost = QLabel("")
+        layout.addWidget(self.januaryCost, 11, 3)
+
+        self.februaryCost = QLabel("")
+        layout.addWidget(self.februaryCost, 12, 3)
+
+        self.marchCost = QLabel("")
+        layout.addWidget(self.marchCost, 13, 3)
+
+        self.aprilCost = QLabel("")
+        layout.addWidget(self.aprilCost, 14, 3)
+
+        self.mayCost = QLabel("")
+        layout.addWidget(self.mayCost, 15, 3)
+
+        self.juneCost = QLabel("")
+        layout.addWidget(self.juneCost, 16, 3)
+
+        self.julyCost = QLabel("")
+        layout.addWidget(self.julyCost, 17, 3)
+
+        self.augustCost = QLabel("")
+        layout.addWidget(self.augustCost, 18, 3)
+
+        self.septemberCost = QLabel("")
+        layout.addWidget(self.septemberCost, 19, 3)
+
+        self.octoberCost = QLabel("")
+        layout.addWidget(self.octoberCost, 20, 3)
+
+        self.novemberCost = QLabel("")
+        layout.addWidget(self.novemberCost, 21, 3)
+
+        self.decemberCost = QLabel("")
+        layout.addWidget(self.decemberCost, 22, 3)
+
 
 app = QApplication([])
 app.setStyle('Fusion')
