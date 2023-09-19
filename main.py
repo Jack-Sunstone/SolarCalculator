@@ -55,6 +55,7 @@ class MainWindow(QMainWindow):
 
         self.setGeometry(0, 0, 600, 700)
 
+        layout = QGridLayout()
 
 
 app = QApplication([])
