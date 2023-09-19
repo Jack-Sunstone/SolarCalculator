@@ -338,6 +338,15 @@ class MainWindow(QMainWindow):
         layout.addWidget(self.calulateButton, 23,1)
         ###############################################
 
+        self.methanolCost = QLabel("Total Methanol Cost: ")
+        layout.addWidget(self.methanolCost, 23, 2)
+
+        self.methanolTotal = QLabel("")
+        layout.addWidget(self.methanolTotal, 23, 3)
+
+        widget = QWidget()
+        widget.setLayout(layout)
+        self.setCentralWidget(widget)
 
 app = QApplication([])
 app.setStyle('Fusion')
