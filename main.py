@@ -28,6 +28,20 @@ Zone41000 = [34570,57730,86050,110720,119330,105790,109460,99830,86590,64590,471
 Zone41200 = [41480,69270,103260,132860,143200,126950,131350,119800,103910,77510,56580,38730]
 Zone42400 = [41480*2,69270*2,103260*2,132860*2,143200*2,126950*2,131350*2,119800*2,103910*2,77510*2,56580*2,38730*2]
 
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+CameraPower = resource_path("CameraPower.txt")
+
+ZonesImage = resource_path("Zones.png")
+
+SunstoneLogo = resource_path("Sunstone_Logo.png")
+
 
 class MainWindow(QMainWindow):
 
