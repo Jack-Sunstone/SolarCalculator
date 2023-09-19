@@ -82,7 +82,10 @@ ZonesImage = resource_path("Zones.png")
 
 SunstoneLogo = resource_path("Sunstone_Logo.png")
 
-
+with open(CameraPower, "r") as f:
+    for line in f.readlines()[1:]:
+        item = line.split()
+        cameras.append(item[0])
 
 class MainWindow(QMainWindow):
 
