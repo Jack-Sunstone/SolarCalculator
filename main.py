@@ -925,6 +925,21 @@ class MainWindow(QMainWindow):
         actualCameraLoadDayMonth.append(camerasTypical * 10.4 * 31)
         actualCameraLoadDayMonth.append(camerasTypical * 8.6 * 30)
         actualCameraLoadDayMonth.append(camerasTypical * 7.6 * 31)
+
+        actualCameraLoadNightMonth.append(camerasHigher * 15.75 * 31)
+        actualCameraLoadNightMonth.append(camerasHigher * 14.2 * 28)
+        actualCameraLoadNightMonth.append(camerasHigher * 12.3 * 31)
+        actualCameraLoadNightMonth.append(camerasHigher * 10.3 * 30)
+        actualCameraLoadNightMonth.append(camerasHigher * 8.5 * 31)
+        actualCameraLoadNightMonth.append(camerasHigher * 7.6 * 30)
+        actualCameraLoadNightMonth.append(camerasHigher * 8.1 * 31)
+        actualCameraLoadNightMonth.append(camerasHigher * 9.6 * 31)
+        actualCameraLoadNightMonth.append(camerasHigher * 11.6 * 30)
+        actualCameraLoadNightMonth.append(camerasHigher * 13.6 * 31)
+        actualCameraLoadNightMonth.append(camerasHigher * 15.4 * 30)
+        actualCameraLoadNightMonth.append(camerasHigher * 16.6 * 31)
+
+
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
