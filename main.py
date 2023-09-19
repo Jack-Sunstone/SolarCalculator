@@ -867,7 +867,7 @@ class MainWindow(QMainWindow):
         ARCbaseline = Baseline
 
     def getSolar(self):
-        global solarArry
+        global solarArray
         solarArray = str(self.solarArraySelect.currentText())
 
 
