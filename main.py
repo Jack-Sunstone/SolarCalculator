@@ -375,11 +375,11 @@ class MainWindow(QMainWindow):
         self.decemberCost = QLabel("")
         layout.addWidget(self.decemberCost, 22, 3)
 
-        #Calculate button
+        # Calculate button
         ###############################################
         self.calulateButton = QPushButton("Calculate")
-
-        layout.addWidget(self.calulateButton, 23,1)
+        self.calulateButton.clicked.connect(self.doCalculations)
+        layout.addWidget(self.calulateButton, 23, 1)
         ###############################################
 
         self.methanolCost = QLabel("Total Methanol Cost: ")
