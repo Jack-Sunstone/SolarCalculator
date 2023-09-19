@@ -27,3 +27,24 @@ Zone4800 = [27660,46180,68840,88570,95460,84630,87570,79870,69270,51670,37720,25
 Zone41000 = [34570,57730,86050,110720,119330,105790,109460,99830,86590,64590,47150,32280]
 Zone41200 = [41480,69270,103260,132860,143200,126950,131350,119800,103910,77510,56580,38730]
 Zone42400 = [41480*2,69270*2,103260*2,132860*2,143200*2,126950*2,131350*2,119800*2,103910*2,77510*2,56580*2,38730*2]
+
+
+class MainWindow(QMainWindow):
+
+    def __init__(self):
+        super().__init__()
+
+        self.setWindowIcon(QIcon(SunstoneLogo))
+        self.setWindowIconText("logo")
+
+        self.setWindowTitle("Power Load Calculator")
+
+        self.setGeometry(0, 0, 600, 700)
+
+
+
+app = QApplication([])
+app.setStyle('Fusion')
+window = MainWindow()
+window.show()
+sys.exit(app.exec())
