@@ -685,8 +685,15 @@ class MainWindow(QMainWindow):
         global camerasHigher
         global camera1LastTypical
         global camera1LastHigher
+        camera1 = str(self.camera1Select.currentText())
+        if len(camera1) == 0:
+            camerasTypical -= camera1LastTypical
+            camerasHigher -= camera1LastHigher
+            self.typicalValue.setText(f"{str(camerasTypical)}W")
+            self.higherValue.setText(f"{str(camerasHigher)}W")
+            camera1LastTypical = 0
+            camera1LastHigher = 0
 
-        
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
