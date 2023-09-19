@@ -110,41 +110,73 @@ class MainWindow(QMainWindow):
         self.NoCameraSelect.addItems(["", "1", "2", "3", "4", "5", "6"])
         layout.addWidget(self.NoCameraSelect, 0, 1)
 
+        self.NoCameraSelect.activated.connect(self.getNumCameras)
+
         self.camera1 = QLabel("Camera 1:")
         layout.addWidget(self.camera1, 1, 0)
+        self.camera1.hide()
 
         self.camera1Select = QComboBox()
         layout.addWidget(self.camera1Select, 1, 1)
+        self.camera1Select.addItems(cameras)
+        self.camera1Select.hide()
+
+        self.camera1Select.activated.connect(self.getCamera1)
 
         self.camera2 = QLabel("Camera 2:")
         layout.addWidget(self.camera2, 2, 0)
+        self.camera2.hide()
 
         self.camera2Select = QComboBox()
         layout.addWidget(self.camera2Select, 2, 1)
+        self.camera2Select.addItems(cameras)
+        self.camera2Select.hide()
+
+        self.camera2Select.activated.connect(self.getCamera2)
 
         self.camera3 = QLabel("Camera 3:")
         layout.addWidget(self.camera3, 3, 0)
+        self.camera3.hide()
 
         self.camera3Select = QComboBox()
         layout.addWidget(self.camera3Select, 3, 1)
+        self.camera3Select.addItems(cameras)
+        self.camera3Select.hide()
+
+        self.camera3Select.activated.connect(self.getCamera3)
 
         self.camera4 = QLabel("Camera 4:")
         layout.addWidget(self.camera4, 4, 0)
+        self.camera4.hide()
 
         self.camera4Select = QComboBox()
         layout.addWidget(self.camera4Select, 4, 1)
+        self.camera4Select.addItems(cameras)
+        self.camera4Select.hide()
+
+        self.camera4Select.activated.connect(self.getCamera4)
 
         self.camera5 = QLabel("Camera 5:")
         layout.addWidget(self.camera5, 5, 0)
+        self.camera5.hide()
 
         self.camera5Select = QComboBox()
         layout.addWidget(self.camera5Select, 5, 1)
+        self.camera5Select.addItems(cameras)
+        self.camera5Select.hide()
+
+        self.camera5Select.activated.connect(self.getCamera5)
 
         self.camera6 = QLabel("Camera 6:")
         layout.addWidget(self.camera6, 6, 0)
+        self.camera6.hide()
 
         self.camera6Select = QComboBox()
         layout.addWidget(self.camera6Select, 6, 1)
+        self.camera6Select.addItems(cameras)
+        self.camera6Select.hide()
+
+        self.camera6Select.activated.connect(self.getCamera6)
 
         ###########################################################
 
