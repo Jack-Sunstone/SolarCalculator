@@ -331,6 +331,13 @@ class MainWindow(QMainWindow):
         self.decemberCost = QLabel("")
         layout.addWidget(self.decemberCost, 22, 3)
 
+        #Calculate button
+        ###############################################
+        self.calulateButton = QPushButton("Calculate")
+
+        layout.addWidget(self.calulateButton, 23,1)
+        ###############################################
+
 
 app = QApplication([])
 app.setStyle('Fusion')
