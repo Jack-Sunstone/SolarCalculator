@@ -946,6 +946,10 @@ class MainWindow(QMainWindow):
             j = j + 1
 
         w = 0
+
+        while w < 12:
+            surplusOrdeficit.append(globals()[f"{unitZone}{solarArray}"][w] - totalLoadMonth[w])
+            w = w + 1
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
