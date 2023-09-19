@@ -828,6 +828,37 @@ class MainWindow(QMainWindow):
             camerasHigher += higherWatt
             self.typicalValue.setText(f"{str(camerasTypical)}W")
             self.higherValue.setText(f"{str(camerasHigher)}W")
+    def getCamera6(self):
+        global camerasTypical
+        global camerasHigher
+        global camera6LastTypical
+        global camera6LastHigher
+        camera6 = str(self.camera6Select.currentText())
+        if len(camera6) == 0:
+            camerasTypical -= camera6LastTypical
+            camerasHigher -= camera6LastHigher
+            self.typicalValue.setText(f"{str(camerasTypical)}W")
+            self.higherValue.setText(f"{str(camerasHigher)}W")
+            camera6LastTypical = 0
+            camera6LastHigher = 0
+        if len(camera6) > 0:
+            camerasTypical -= camera6LastTypical
+            camerasHigher -= camera6LastHigher
+            with open("CameraPower.txt") as f:
+                datefile = f.readlines()
+                for line in datefile:
+                    if camera6 in line:
+                        item = line.split()
+                        typicalWatt = float(item[1])
+                        higherWatt = float(item[2])
+            camera6LastTypical = typicalWatt
+            camera6LastHigher = higherWatt
+            camerasTypical += typicalWatt
+            camerasHigher += higherWatt
+            self.typicalValue.setText(f"{str(camerasTypical)}W")
+            self.higherValue.setText(f"{str(camerasHigher)}W")
+
+            
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
