@@ -877,6 +877,11 @@ class MainWindow(QMainWindow):
         global ARCbaseline
         global unitZone
 
+        baselineLoadPerMonth.clear()
+        actualCameraLoadDayMonth.clear()
+        actualCameraLoadNightMonth.clear()
+        totalLoadMonth.clear()
+        surplusOrdeficit.clear()
 
 app = QApplication([])
 app.setStyle('Fusion')
