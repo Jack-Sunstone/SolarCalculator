@@ -945,7 +945,7 @@ class MainWindow(QMainWindow):
             totalLoadMonth.append(baselineLoadPerMonth[j] + actualCameraLoadDayMonth[j] + actualCameraLoadNightMonth[j])
             j = j + 1
 
-
+        w = 0
 app = QApplication([])
 app.setStyle('Fusion')
 window = MainWindow()
